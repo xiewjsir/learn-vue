@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>component v-model</title>
+    <script src="../vue.js"></script>
+</head>
+<body>
+    <div id="components-demo">
+        <div :style="">
+            <custom-input v-model="searchText"></custom-input>
+            <div>{{searchText}}</div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        Vue.component('custom-input',{
+            props:['value'],
+            template: '<input v-bind:value="value" v-on:input="$emit(\'input\',$event.target.value)">'
+        })
+        new Vue({
+            el:"#components-demo",
+            data:{
+                searchText:'v-mode test'
+            }
+        })
+    </script>
+</body>
+</html>

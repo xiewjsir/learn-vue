@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2018-05-31 10:07:19
+ * @version $Id$
+ */
+.myclass{
+	color:red;
+	border;1px solid blue;
+}
